@@ -40,8 +40,6 @@ F.max(wind_date_df.wind_speed).alias("max_wind_speed")\
 )
 
 # Writing the file output to your local S3 bucket
-
-# Writing the file output to your local S3 bucket
 current_time = datetime.now().strftime('%Y-%m-%d-%H-%M')
 agg_wind_df.write.csv(f"{output_prefix}/{current_time}/")
 
